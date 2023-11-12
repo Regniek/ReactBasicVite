@@ -1,7 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Navbar = ({onSearch}) => {
   const [ search, setSearch ] = useState('');
+
+  useEffect(() => {
+    console.log('1010 effect search')
+  }, [search]);
+
+  useEffect(() => {
+    console.log('1010 effect on search')
+  }, [onSearch]);
 
   const handleInputChange = (e) => {
     setSearch(e.target.value)

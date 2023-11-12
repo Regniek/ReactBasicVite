@@ -12,7 +12,6 @@ const SignupForm = () => {
         reset();
     };
 
-    console.log(errors)
 
     return(
         <form onSubmit={handleSubmit(handleSubmitForm)}>
